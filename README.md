@@ -20,7 +20,7 @@ A continuación, se presentan algunas capturas de pantalla de la interfaz de usu
 
 ## Cómo Funciona
 
-### Generación y Actualización del Código QR
+### Generación y Actualización del Código Q
 
 El proceso comienza en la `MainActivity`, donde se genera y se muestra un código QR junto con un código alfanumérico en la pantalla del televisor. Un `Handler` actualiza ambos cada 15 segundos.
 
