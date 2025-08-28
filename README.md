@@ -1,49 +1,65 @@
-# TVtestQR - Aplicación Android TV para Inicio de Sesión con QR
+# 📺 TVtestQR – Android TV Login with QR Code
 
-## Descripción
+**TVtestQR** is an Android TV prototype application designed to allow users to log in securely and easily by scanning a QR code displayed on their TV screen with a mobile device.  
 
-TVtestQR es una aplicación en desarrollo para dispositivos Android TV que facilita a los usuarios el inicio de sesión mediante un código QR. El proyecto está en constante evolución y este documento se actualizará a medida que se agreguen nuevas funcionalidades y mejoras.
+> **Disclaimer:** This project was developed as a **proof of concept while working at Megamedia** and does not represent or expose the production code of the official application.  
 
-## Funcionalidades
+---
 
-- **Inicio de Sesión con QR**: Los usuarios pueden iniciar sesión rápidamente escaneando un código QR generado en la pantalla de su televisor con la cámara de su dispositivo móvil.
-- **Actualización periódica del QR**: El código QR se actualiza cada 15 segundos para garantizar la seguridad y la singularidad durante el proceso de inicio de sesión.
-- **Inicio de Sesión Manual**: Para los usuarios que prefieren un método tradicional, ofrecemos la opción de iniciar sesión manualmente ingresando correo electrónico y contraseña. (Pendiente)
+## 🚀 Key Features
 
-## Pantallas del Proyecto
+- **QR Code Login:** Quickly sign in by scanning a unique QR code with your phone camera.  
+- **Auto-Refreshing QR Code:** The code refreshes every 15 seconds to ensure security and uniqueness.  
+- **Manual Login (Planned):** A fallback method allowing users to log in with email and password.  
+- **Optimized Android TV UI:** Built using **Leanback** components for a clean and intuitive TV interface.  
 
-A continuación, se presentan algunas capturas de pantalla de la interfaz de usuario de TVtestQR:
+---
 
-### Pantalla de Inicio de Sesión con QR
+## 🖼️ UI Screens (Prototype)
+
+- Login screen with dynamic QR code.  
+- Auto-refresh indication for enhanced security.  
+- Planned manual login option with email/password input.
+
 ![Pantalla de Inicio de Sesión con QR](screenshots/login_screen1.png)
 ![Pantalla de Inicio de Sesión con QR - Actualización](screenshots/login_screen2.png)
 
-## Cómo Funciona
+## ⚙️ How It Works
 
-### Generación y Actualización del Código Q
+### QR Code Generation and Refresh  
+- Implemented in `MainActivity.kt`.  
+- A QR code and alphanumeric session code are generated and displayed on screen.  
+- A `Handler` refreshes both every 15 seconds to keep the session secure.  
 
-El proceso comienza en la `MainActivity`, donde se genera y se muestra un código QR junto con un código alfanumérico en la pantalla del televisor. Un `Handler` actualiza ambos cada 15 segundos.
+### Manual Login (Upcoming Feature)  
+- Selecting *"Prefer another way to sign in"* will navigate to a traditional login screen.  
+- Currently marked as **pending implementation** in this prototype.  
 
-### Inicio de Sesión Manual
+---
 
-Al seleccionar "Prefiero otra opción para conectarme", el usuario es dirigido a una pantalla donde puede ingresar sus credenciales de forma manual.(Pendiente)
+## 🧰 Development Details
 
-## Desarrollo
+- **Minimum SDK:** Android 21 (Lollipop)  
+- **Target SDK:** Android 34  
+- **Dependencies:**  
+  - [ZXing](https://github.com/zxing/zxing) – QR code generation.  
+  - [Glide](https://github.com/bumptech/glide) – Image handling.  
+  - [Leanback](https://developer.android.com/training/tv/start/leanback) – Android TV UI framework.  
 
-### Configuraciones de Compilación
+---
 
-El proyecto se compila con el SDK 34 y está configurado para admitir desde la versión 21 de Android (Lollipop) en adelante.
+## 📚 References
 
-### Dependencias
+- [Android TV Developer Guide](https://developer.android.com/tv)  
+- [ZXing QR Code Library](https://github.com/zxing/zxing)  
+- [Glide Image Library](https://github.com/bumptech/glide)  
 
-- ZXing para la generación de códigos QR.
-- Glide para la gestión de imágenes.
-- Leanback para la interfaz de usuario optimizada para TV.
+---
 
-## Referencias
+## ✨ About this Project
 
-- [Documentación oficial de Android TV](https://developer.android.com/tv)
-- [Guía para la generación de códigos QR con ZXing](https://github.com/journeyapps/zxing-android-embedded)
-- [Documentación de Glide](https://bumptech.github.io/glide/)
+This prototype was created to **showcase login flows and TV-optimized UI concepts**. It demonstrates how secure authentication using QR codes can be implemented for streaming platforms or other Android TV applications.  
+
+The repository is public **for portfolio and demonstration purposes**. While functional, this project is not a production app and may evolve with further features and refinements.
 
 
